@@ -1,8 +1,8 @@
 #include <wiringPi.h>
 #include <stdio.h>
 
-#define LedPin 0
-#define TiltPin 1
+const int LedPin = 0;
+const int TiltPin = 1;
 
 int main(void)
 {
@@ -15,12 +15,14 @@ int main(void)
   pinMode(TiltPin, INPUT);
 
   while(1) {
-    if (digitalRead(TiltPin == 0)) {
+    int x = digitalRead(TiltPin);
+    printf("%d\n", x);
+    if (x == 0) {
       digitalWrite(LedPin, LOW);
-      printf("Led is on\n");
+      printf("led off\n");
     }else {
       digitalWrite(LedPin, HIGH);
-      printf("Led Off\n");
+      printf("led on\n");
     }
   }
 
