@@ -18,20 +18,32 @@ int main(void) {
 
   while(1)
   {
-    std::cout << "Turn lights on or off?" << std::endl;
+    std::cout << "Turn lights on or off?\n";
     std::cin >> usrinput;
 
-    if (usrinput == "on")
+    std::cout << endl << endl;
+
+    std::cout << "You entered...\n";
+    std::cout << usrinput << std::endl;
+
+    std::cout << endl << endl;
+
+    if (usrinput == "on" || usrinput == "On" || usrinput == "ON")
     {
-      std::cout << "Turning lights on..." << std::endl;
+      std::cout << "Turning lights on...\n";
+      std::cout << endl << endl;
       digitalWrite(LedPin, LOW);
-    } else if (usrinput == "off")
+    } else if (usrinput == "off" || usrinput == "Off" || usrinput == "OFF")
     {
-      std::cout << "Turning lights off..." << std::endl;
+      std::cout << "Turning lights off...\n";
+      std::cout << endl << endl;
       digitalWrite(LedPin, HIGH);
+    } else if (usrinput != "on" || usrinput != "off")
+    {
+      std::cout << "Please only enter a yes or no response.\n";
+      std::cout << endl << endl;
     }
 
-    std::cout << usrinput << std::endl;
   }
 
   return 0;
