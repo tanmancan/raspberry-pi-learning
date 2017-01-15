@@ -21,27 +21,27 @@ int main(void) {
     std::cout << "Turn lights on or off?\n";
     std::cin >> usrinput;
 
-    std::cout << endl << endl;
+    std::cout << std::endl; << std::endl;;
 
     std::cout << "You entered...\n";
     std::cout << usrinput << std::endl;
 
-    std::cout << endl << endl;
+    std::cout << std::endl; << std::endl;;
 
     if (usrinput == "on" || usrinput == "On" || usrinput == "ON")
     {
       std::cout << "Turning lights on...\n";
-      std::cout << endl << endl;
+      std::cout << std::endl; << std::endl;;
       digitalWrite(LedPin, LOW);
     } else if (usrinput == "off" || usrinput == "Off" || usrinput == "OFF")
     {
       std::cout << "Turning lights off...\n";
-      std::cout << endl << endl;
+      std::cout << std::endl; << std::endl;;
       digitalWrite(LedPin, HIGH);
     } else if (usrinput != "on" || usrinput != "off")
     {
       std::cout << "Please only enter a yes or no response.\n";
-      std::cout << endl << endl;
+      std::cout << std::endl; << std::endl;;
     }
 
   }
