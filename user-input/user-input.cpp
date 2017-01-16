@@ -15,10 +15,11 @@ int main(void) {
   pinMode(LedPin, OUTPUT);
 
   std::string usrinput;
+  int pinStatus;
 
   while(1)
   {
-    int pinStatus = digitalRead(LedPin);
+    pinStatus = digitalRead(LedPin);
     std::cout << "Pin status\n" << pinStatus << std::endl;
 
     std::cout << "===========================\n";
