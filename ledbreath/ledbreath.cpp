@@ -14,15 +14,16 @@ int main(void) {
   pinMode(LedPin, PWM_OUTPUT);
 
   while(1) {
-    for (int i = 0; i < 1024; i++)
+    for (int i = 0; i < 701; i++)
     {
       pwmWrite(LedPin, i);
-      delay(5);
+      delay(1);
     }
-    for (int i = 1023; i >= 0; i--)
+    delay(1000);
+    for (int i = 700; i >= 0; i--)
     {
       pwmWrite(LedPin, i);
-      delay(5);
+      delay(1);
     }
   }
 
