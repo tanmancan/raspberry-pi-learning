@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 
-const in LedPin = 0;
+const int LedPin = 0;
 
 int main(void) {
   if (wiringPiSetup() == -1)
